@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stone_Paper_Scissor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rZ-Qk-Qwe" userLabel="Stone">
+                                <rect key="frame" x="187" y="213" width="39" height="30"/>
+                                <state key="normal" title="stone"/>
+                                <connections>
+                                    <action selector="playnowWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h37-uG-Yfp"/>
+                                    <segue destination="pUk-MP-ZS6" kind="show" identifier="stoneChoice" id="PIQ-Nl-COV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5f-se-MjC" userLabel="Paper">
+                                <rect key="frame" x="187" y="405" width="40" height="30"/>
+                                <state key="normal" title="paper"/>
+                                <connections>
+                                    <action selector="playnowWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3h7-aq-Jfw"/>
+                                    <segue destination="pUk-MP-ZS6" kind="show" identifier="paperChoice" id="jhX-Z1-MEx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojb-rx-UH5" userLabel="Scissor">
+                                <rect key="frame" x="187" y="609" width="49" height="30"/>
+                                <state key="normal" title="scissor"/>
+                                <connections>
+                                    <action selector="playnowWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kz1-85-tWv"/>
+                                    <segue destination="pUk-MP-ZS6" kind="show" identifier="scissorChoice" id="7SH-2g-yAs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4rZ-Qk-Qwe" secondAttribute="trailing" symbolic="YES" id="D5F-V5-WDw"/>
+                            <constraint firstItem="w5f-se-MjC" firstAttribute="leading" secondItem="4rZ-Qk-Qwe" secondAttribute="leading" id="Sm3-Fu-MzJ"/>
+                            <constraint firstItem="w5f-se-MjC" firstAttribute="leading" secondItem="Ojb-rx-UH5" secondAttribute="leading" id="UOG-nJ-mE3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ojb-rx-UH5" secondAttribute="bottom" constant="223" id="cT5-Uj-yGa"/>
+                            <constraint firstItem="w5f-se-MjC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="405" id="cu9-Bl-HbT"/>
+                            <constraint firstItem="w5f-se-MjC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="meL-S1-BJJ"/>
+                            <constraint firstItem="4rZ-Qk-Qwe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="169" id="rfE-Ep-FCg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ojb-rx-UH5" secondAttribute="trailing" symbolic="YES" id="xNU-jN-OYz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="paper" destination="w5f-se-MjC" id="gw0-PW-9dg"/>
+                        <outlet property="scissor" destination="Ojb-rx-UH5" id="siy-OT-ajh"/>
+                        <outlet property="stone" destination="4rZ-Qk-Qwe" id="5UA-JK-zVM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97" y="7"/>
+        </scene>
+        <!--Play View Controller-->
+        <scene sceneID="fiu-9o-dDI">
+            <objects>
+                <viewController id="pUk-MP-ZS6" userLabel="Play View Controller" customClass="PlayViewController" customModule="Stone_Paper_Scissor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GFh-2W-R6l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbk-HT-dfo">
+                                <rect key="frame" x="168" y="245" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="yes"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Q1y-VC-KRZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="isR-vz-uoe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="7"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PIQ-Nl-COV"/>
+    </inferredMetricsTieBreakers>
+</document>
