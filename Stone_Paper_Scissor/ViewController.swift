@@ -56,6 +56,7 @@ class ViewController: UIViewController {
         default:
             controller.cnumber = ComputerRandomValue()
             controller.unumber = 10
+            print("default case ")
         }
             }
 }

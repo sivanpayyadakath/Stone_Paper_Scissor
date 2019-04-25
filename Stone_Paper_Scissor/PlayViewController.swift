@@ -27,7 +27,8 @@ class PlayViewController: UIViewController {
         switch (unumber, cnumber) {
         case let (unumber, cnumber) where unumber == cnumber:
             print("It's a Tie")
-            resultView.image = UIImage(named: "It's A Tie")
+            resultText.text = "Its a TIE"
+            resultView.image = UIImage(named: "tie")
             resultText.font = .systemFont(ofSize: 50)
             uImage.image = UIImage(named: "\(Rcase(rawValue: unumber!)!)")
             cImage.image = UIImage(named: "\(Rcase(rawValue: cnumber!)!)")
