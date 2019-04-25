@@ -18,25 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rZ-Qk-Qwe" userLabel="Stone">
-                                <rect key="frame" x="187" y="213" width="39" height="30"/>
-                                <state key="normal" title="stone"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rZ-Qk-Qwe" userLabel="Stone">
+                                <rect key="frame" x="169.5" y="213" width="75" height="65"/>
+                                <state key="normal" image="rock"/>
                                 <connections>
                                     <action selector="playnowWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h37-uG-Yfp"/>
                                     <segue destination="pUk-MP-ZS6" kind="show" identifier="stoneChoice" id="PIQ-Nl-COV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5f-se-MjC" userLabel="Paper">
-                                <rect key="frame" x="187" y="405" width="40" height="30"/>
-                                <state key="normal" title="paper"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5f-se-MjC" userLabel="Paper">
+                                <rect key="frame" x="169.5" y="405" width="75" height="65"/>
+                                <state key="normal" image="paper"/>
                                 <connections>
                                     <action selector="playnowWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3h7-aq-Jfw"/>
                                     <segue destination="pUk-MP-ZS6" kind="show" identifier="paperChoice" id="jhX-Z1-MEx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojb-rx-UH5" userLabel="Scissor">
-                                <rect key="frame" x="187" y="609" width="49" height="30"/>
-                                <state key="normal" title="scissor"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojb-rx-UH5" userLabel="Scissor">
+                                <rect key="frame" x="169.5" y="574" width="75" height="65"/>
+                                <state key="normal" image="scissors"/>
                                 <connections>
                                     <action selector="playnowWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kz1-85-tWv"/>
                                     <segue destination="pUk-MP-ZS6" kind="show" identifier="scissorChoice" id="7SH-2g-yAs"/>
@@ -64,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97" y="7"/>
+            <point key="canvasLocation" x="-97.101449275362327" y="6.6964285714285712"/>
         </scene>
         <!--Play View Controller-->
         <scene sceneID="fiu-9o-dDI">
@@ -74,22 +74,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbk-HT-dfo">
-                                <rect key="frame" x="168" y="245" width="30" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Am-B4-gaq" userLabel="Result Image View">
+                                <rect key="frame" x="87" y="383" width="240" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="161" id="6mK-Sh-yTP"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yip-73-6aa">
+                                <rect key="frame" x="87" y="579" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Te7-jw-FM9" userLabel="uImage">
+                                <rect key="frame" x="48" y="154" width="134" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="yes"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozu-lV-6qu" userLabel="cImage">
+                                <rect key="frame" x="252" y="154" width="130" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9X-GX-ZPU">
+                                <rect key="frame" x="172" y="794" width="70" height="30"/>
+                                <state key="normal" title="Play again"/>
+                                <connections>
+                                    <action selector="goBack" destination="pUk-MP-ZS6" eventType="touchUpInside" id="DHE-Gx-e1W"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3Am-B4-gaq" firstAttribute="leading" secondItem="Q1y-VC-KRZ" secondAttribute="leading" constant="87" id="0G7-zg-3Np"/>
+                            <constraint firstItem="T9X-GX-ZPU" firstAttribute="centerX" secondItem="Yip-73-6aa" secondAttribute="centerX" id="3GM-Bt-TLj"/>
+                            <constraint firstItem="T9X-GX-ZPU" firstAttribute="centerX" secondItem="GFh-2W-R6l" secondAttribute="centerX" id="JrZ-73-aQX"/>
+                            <constraint firstItem="3Am-B4-gaq" firstAttribute="leading" secondItem="Yip-73-6aa" secondAttribute="leading" id="Uml-ay-Tgi"/>
+                            <constraint firstItem="3Am-B4-gaq" firstAttribute="top" secondItem="GFh-2W-R6l" secondAttribute="top" constant="383" id="XUg-5M-wnB"/>
+                            <constraint firstItem="T9X-GX-ZPU" firstAttribute="top" secondItem="Yip-73-6aa" secondAttribute="bottom" constant="87" id="byY-zW-Iye"/>
+                            <constraint firstItem="Q1y-VC-KRZ" firstAttribute="bottom" secondItem="T9X-GX-ZPU" secondAttribute="bottom" constant="38" id="eL9-rC-iIt"/>
+                            <constraint firstItem="Yip-73-6aa" firstAttribute="top" secondItem="3Am-B4-gaq" secondAttribute="bottom" constant="35" id="gLf-bL-GRr"/>
+                            <constraint firstItem="T9X-GX-ZPU" firstAttribute="centerX" secondItem="3Am-B4-gaq" secondAttribute="centerX" id="oq7-NM-151"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Q1y-VC-KRZ"/>
                     </view>
+                    <connections>
+                        <outlet property="cImage" destination="ozu-lV-6qu" id="ZJw-bZ-fvh"/>
+                        <outlet property="playAgain" destination="T9X-GX-ZPU" id="iuS-Av-rbx"/>
+                        <outlet property="resultText" destination="Yip-73-6aa" id="c9C-Sm-QAN"/>
+                        <outlet property="resultView" destination="3Am-B4-gaq" id="pat-fu-aPp"/>
+                        <outlet property="uImage" destination="Te7-jw-FM9" id="luL-CU-y7P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="isR-vz-uoe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1164" y="7"/>
+            <point key="canvasLocation" x="1163.768115942029" y="6.6964285714285712"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paper" width="75" height="65"/>
+        <image name="rock" width="75" height="65"/>
+        <image name="scissors" width="75" height="65"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PIQ-Nl-COV"/>
+        <segue reference="7SH-2g-yAs"/>
     </inferredMetricsTieBreakers>
 </document>
